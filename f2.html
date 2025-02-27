@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+
+        .sidebar {
+            width: 60px;
+            height: 100vh;
+            background-color: #1e1e1e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            text-decoration: none;
+        }
+
+        .icon {
+            font-size: 24px;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow-y: scroll; /* Enables scrolling for content */
+        }
+
+        .section {
+            padding: 40px 0;
+            margin: 20px 0;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .text {
+            padding: 10px;
+        }
+
+        h2 {
+            margin: 0;
+            color: #b96eff;
+        }
+
+        p {
+            margin: 5px 0 0;
+            color: #aaa;
+        }
+
+        /* Modal (lightbox) styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#sarcasticSection" class="icon">🌞</a>
+        <a href="#heartfeltSection" class="icon">📖</a>
+        <a href="#crazySection" class="icon">📝</a>
+        <a href="#adventureSection" class="icon">🎬</a>
+    </div>
+    
+    <div class="content">
+        <!-- Sarcastic Section -->
+        <div id="sarcasticSection" class="section">
+            <h2>For the sarcastic one</h2>
+            <div class="card">
+                <img src="p16.jpg" alt="Sarcastic 1" class="thumbnail">
+                <img src="p2.jpg" alt="Sarcastic 2" class="thumbnail">
+                <img src="p1.jpg" alt="Sarcastic 1" class="thumbnail">
+                <img src="p2.jpg" alt="Sarcastic 2" class="thumbnail">
+                <img src="p3.jpg" alt="Sarcastic 3" class="thumbnail">
+                <img src="p4.jpg" alt="Sarcastic 3" class="thumbnail">
+                
+            </div>
+            <p>Oh, my dearest, my one and only. Without you.... chachipotha aney dialogues ayite chppalenu gaani,...... I &hearts; baby. And manam chesina panulu 10 th class lo ,school lo assalu marchipolenu . we 4 (nuvvu, nenu,rahul, aaromal) enjoyed a lott.</p>
+        </div>
+
+        <!-- Heartfelt Section -->
+        <div id="heartfeltSection" class="section">
+            <h2>For the heartfelt</h2>
+            <div class="card">
+                <img src="p17.jpg" alt="Sarcastic 1" class="thumbnail">
+                <img src="p14.jpg" alt="Sarcastic 2" class="thumbnail">
+                <img src="p5.jpg" alt="Heartfelt 1" class="thumbnail">
+                <img src="p13.jpg" alt="Heartfelt 2" class="thumbnail">
+                <img src="p7.jpg" alt="Heartfelt 3" class="thumbnail">
+                <img src="p15.jpg" alt="Sarcastic 1" class="thumbnail">
+                
+            </div>
+            <p>Some bonds are just meant to be cherished... but when I'm with you I feel more happy and safe, baby. Ippati varuku ni place ni refill chesey vallu evaru leru and till now I didn't find a girl like you as my gallh. I &hearts; ey bangaram.</p>
+        </div>
+
+        <!-- Crazy Memories Section -->
+        <div id="UH and ME!!" class="section">
+            <h2>For the crazy moments</h2>
+            <div>
+                <video width="640" height="360" controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p>When we laughed until our stomachs hurt...
+                smalll surprise bangarammmmmm &hearts; &hearts;
+            </p>
+        </div>
+
+        <!-- Adventure Section -->
+        <div id="adventureSection" class="section">
+            <h2>For the adventures</h2>
+            <div class="card">
+                <img src="p9.jpg" alt="Adventure 1" class="thumbnail">
+                <img src="p10.jpg" alt="Adventure 2" class="thumbnail">
+                <img src="p11.jpg" alt="Adventure 3" class="thumbnail">
+                <img src="p12.jpg" alt="Adventure 3" class="thumbnail">
+                <img src="p18.jpg" alt="Sarcastic 2" class="thumbnail">
+                <img src="p19.jpg" alt="Sarcastic 1" class="thumbnail">
+                
+            </div>
+            <p>Those long rides and unforgettable trips...  Supperrr trips kadoooo manavi. Chaala baaga enjpoy goa beach,tajmahal ayite asalu supperrr undi</p>
+        </div>
+    </div>
+
+    <!-- Modal for displaying enlarged image -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Get modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal
+        var modalImg = document.getElementById("img01");
+
+        // Get all thumbnails
+        var thumbnails = document.querySelectorAll('.thumbnail');
+
+        // Add event listener to each thumbnail image
+        thumbnails.forEach(function (thumbnail) {
+            thumbnail.addEventListener('click', function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        // Get the <span> element to close the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
