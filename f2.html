@@ -198,7 +198,24 @@
 
     <script>
         var audio = document.getElementById('myAudio');
-    audio.volume = 0.2;  
+    var video = document.querySelector('video');
+
+    audio.volume = 1.0;  
+
+    // Function to reduce audio volume when video plays
+    video.addEventListener('play', function () {
+        audio.volume = 0.2; // Reduce volume
+    });
+
+    // Function to restore audio volume when video pauses or ends
+    video.addEventListener('pause', function () {
+        audio.volume = 1.0; // Restore volume
+    });
+
+    video.addEventListener('ended', function () {
+        audio.volume = 1.0; // Restore volume when video ends
+    });
+
         // Get modal
         var modal = document.getElementById("myModal");
 
